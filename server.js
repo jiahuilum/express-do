@@ -1,10 +1,9 @@
-const express = require('express');
-
-const app = express();
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
-  console.log(JSON.stringify(req.headers));
   res.send(req.headers);
 });
 
-app.listen(3000, () => console.log('Example app is listening on port 3000.'));
+app.listen(port, () => console.log(`sample-expressjs app listening on port ${port}!`))
